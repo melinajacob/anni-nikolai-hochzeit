@@ -6,8 +6,16 @@
   <title>Annika & Nicolai – 15. Mai 2027</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
   <style>
+    @font-face {
+      font-family: 'Montpellier';
+      src: url('fonts/Montpellier-Regular.woff2') format('woff2'),
+           url('fonts/Montpellier-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
     *, *::before, *::after {
       margin: 0;
       padding: 0;
@@ -15,18 +23,18 @@
     }
 
     :root {
-      --sage: #BFC09E;
-      --sage-light: #D7D9C3;
-      --blush: #F5C7B7;
-      --blush-light: #FFDBCF;
-      --cream: #FDF8F4;
-      --lavender: #DCD9EB;
-      --lavender-light: #ECEAF3;
-      --dusty-rose: #D4A0A0;
+      --sage: #8FAABE;
+      --sage-light: #C5D5E4;
+      --blush: #E8B4B8;
+      --blush-light: #F5D5D8;
+      --cream: #FDF8F5;
+      --lavender: #FDDCB5;
+      --lavender-light: #FDE8CC;
+      --dusty-rose: #C98A8E;
       --warm-gray: #A89F91;
-      --text-dark: #3D3A35;
-      --text-medium: #6B6560;
-      --text-light: #9B9590;
+      --text-dark: #2C3549;
+      --text-medium: #4A5568;
+      --text-light: #8090A5;
     }
 
     html {
@@ -34,7 +42,7 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Source Serif 4', serif;
       font-weight: 300;
       color: var(--text-dark);
       background-color: var(--cream);
@@ -104,7 +112,7 @@
     }
 
     .hero-date-top {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Source Serif 4', serif;
       font-size: 0.85rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
@@ -113,7 +121,7 @@
     }
 
     .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-weight: 300;
       font-size: clamp(3.5rem, 10vw, 8rem);
       line-height: 1.1;
@@ -131,7 +139,7 @@
     }
 
     .hero-subtitle {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-size: 1.4rem;
       font-weight: 300;
       color: var(--text-medium);
@@ -184,15 +192,17 @@
       text-transform: uppercase;
       color: var(--text-light);
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     .section-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-weight: 300;
       font-size: clamp(2.2rem, 5vw, 3.5rem);
       color: var(--text-dark);
       margin-bottom: 2rem;
       line-height: 1.2;
+      text-align: center;
     }
 
     .section-text {
@@ -290,7 +300,7 @@
     }
 
     .countdown-number {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-size: 3.5rem;
       font-weight: 300;
       color: var(--text-dark);
@@ -319,7 +329,7 @@
     }
 
     .location-details h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-weight: 400;
       font-size: 1.6rem;
       color: var(--text-dark);
@@ -390,7 +400,7 @@
     .timeline-day-label span {
       background: var(--sage-light);
       padding: 0.5rem 1.5rem;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-size: 1.4rem;
       font-weight: 400;
       color: var(--text-dark);
@@ -446,7 +456,7 @@
     }
 
     .timeline-content h4 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-weight: 400;
       font-size: 1.3rem;
       color: var(--text-dark);
@@ -492,7 +502,7 @@
     }
 
     .ceremony-highlight h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-weight: 400;
       font-size: 1.8rem;
       color: var(--text-dark);
@@ -521,7 +531,7 @@
     }
 
     .accommodation-card h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-weight: 400;
       font-size: 1.5rem;
       color: var(--text-dark);
@@ -581,7 +591,7 @@
     }
 
     footer h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Montpellier', cursive;
       font-weight: 300;
       font-size: 2.5rem;
       color: rgba(255,255,255,0.9);
@@ -704,8 +714,7 @@
   <!-- Countdown -->
   <section class="countdown-section" id="countdown">
     <div class="section-inner fade-in" style="text-align: center;">
-      <p class="section-label">Es dauert noch</p>
-      <div class="section-title">Bis zum großen Tag</div>
+      <div class="section-title">Nur noch</div>
       <div class="countdown" id="countdown-timer">
         <div class="countdown-item">
           <span class="countdown-number" id="days">---</span>
@@ -742,8 +751,8 @@
           <div class="timeline-item left fade-in">
             <div class="timeline-content">
               <span class="time">Abends</span>
-              <h4>Pizzaessen</h4>
-              <p>Gemeinsamer Abend zum Ankommen und Wiedersehen</p>
+              <h4>Gemütlicher Abend</h4>
+              <p>Wir freuen uns über alle, die schon da sind und ein gemütliches Beisammensein bei Pizza und Getränken</p>
             </div>
             <div class="timeline-dot"></div>
             <div class="timeline-spacer"></div>
@@ -758,7 +767,7 @@
           <div class="timeline-item right fade-in">
             <div class="timeline-content">
               <span class="time">Nachmittag</span>
-              <h4>Freie Trauung</h4>
+              <h4>Ab 13:30 Uhr Freie Trauung</h4>
               <p>Unter der Weide im Grünen</p>
             </div>
             <div class="timeline-dot"></div>
@@ -767,7 +776,7 @@
           <div class="timeline-item left fade-in">
             <div class="timeline-content">
               <span class="time">Im Anschluss</span>
-              <h4>Feier &amp; Abendessen</h4>
+              <h4>Abendessen &amp; Feier</h4>
               <p>Gemeinsam feiern, essen, tanzen</p>
             </div>
             <div class="timeline-dot"></div>
@@ -784,7 +793,7 @@
             <div class="timeline-content">
               <span class="time">Morgens</span>
               <h4>Gemeinsames Frühstück</h4>
-              <p>Gemütlicher Ausklang für alle, die noch da sind</p>
+              <p>Gemeinsames Frühstück für alle, die schon oder noch wach sind</p>
             </div>
             <div class="timeline-dot"></div>
             <div class="timeline-spacer"></div>
@@ -800,12 +809,12 @@
       <p class="section-label fade-in">Die Zeremonie</p>
       <h2 class="section-title fade-in">Freie Trauung unter freiem Himmel</h2>
       <div class="ceremony-image fade-in">
-        <img src="images/trauung-weide.jpg" alt="Freie Trauung unter der Weide am Storchenhof Blumenow">
+        <img src="images/zeremonie-weide.jpg" alt="Freie Trauung unter der Weide am Storchenhof Blumenow">
       </div>
       <div class="ceremony-highlight fade-in">
         <div class="icon">&#127807;</div>
         <h3>Unter der Weide</h3>
-        <p>Unsere freie Trauung findet draußen unter einer wunderschönen Weide statt. Wir freuen uns, diesen besonderen Moment mit euch im Grünen zu teilen.</p>
+        <p>Bei schönem Wetter findet unsere freie Trauung unter einer wunderschönen Weide draußen statt. Drückt uns die Daumen, dass wir diesen besonderen Moment mit euch im Freien teilen können.</p>
         <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-light); font-style: italic;">Kleiner Tipp für Allergiker: Denkt sicherheitshalber an eure Antihistaminika!</p>
       </div>
     </div>
@@ -840,7 +849,7 @@
   <section class="accommodation-section" id="unterkunft">
     <div class="section-inner">
       <p class="section-label fade-in">Übernachtung</p>
-      <h2 class="section-title fade-in">Unterkünfte vor Ort</h2>
+      <h2 class="section-title fade-in">Übernachtungsmöglichkeit vor Ort</h2>
       <p class="section-text fade-in">
         Wer das ganze Wochenende mit uns verbringen und vor Ort übernachten möchte, kann direkt beim Storchenhof Blumenow ein Zimmer reservieren.
       </p>
