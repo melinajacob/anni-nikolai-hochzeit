@@ -272,7 +272,7 @@
     /* Couple Photo */
     .couple-photo {
       width: 100%;
-      max-height: 70vh;
+      height: 90vh;
       overflow: hidden;
       position: relative;
     }
@@ -281,6 +281,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 60%;
+      filter: saturate(0.75) brightness(1.05) contrast(0.95);
       display: block;
     }
 
@@ -608,6 +610,49 @@
       letter-spacing: 0.1em;
     }
 
+    .easter-egg-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .easter-egg-modal.visible {
+      display: flex;
+    }
+
+    .easter-egg-modal img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+
+    .easter-egg-modal .close-btn {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      border: none;
+      line-height: 1;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       nav {
@@ -713,7 +758,7 @@
 
   <!-- Couple Photo -->
   <div class="couple-photo">
-    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&h=700&fit=crop&crop=center" alt="Annika & Nicolai – Platzhalter">
+    <img src="images/paar.jpeg" alt="Annika & Nicolai">
   </div>
 
   <!-- Countdown -->
@@ -854,7 +899,7 @@
   <section class="accommodation-section" id="unterkunft">
     <div class="section-inner">
       <p class="section-label fade-in">Übernachtung</p>
-      <h2 class="section-title fade-in">Übernachtungsmöglichkeit vor Ort</h2>
+      <h2 class="section-title fade-in" id="easter-egg-trigger">Übernachtungsmöglichkeit vor Ort</h2>
       <p class="section-text fade-in">
         Wer das ganze Wochenende mit uns verbringen und vor Ort übernachten möchte, kann direkt beim Storchenhof Blumenow ein Zimmer reservieren.
       </p>
@@ -883,6 +928,11 @@
     <h2>Annika & Nicolai</h2>
     <p>15. Mai 2027 &middot; Storchenhof Blumenow</p>
   </footer>
+
+  <div class="easter-egg-modal" id="easterEggModal">
+    <button class="close-btn" aria-label="Schließen">&times;</button>
+    <img src="images/easter-egg.jpeg" alt="">
+  </div>
 
   <script>
     // Countdown
@@ -935,6 +985,18 @@
         nav.style.transform = 'translateY(0)';
       }
       lastScroll = currentScroll;
+    });
+
+    // Easter Egg
+    const eeModal = document.getElementById('easterEggModal');
+    document.getElementById('easter-egg-trigger').addEventListener('dblclick', (e) => {
+      e.preventDefault();
+      eeModal.classList.add('visible');
+    });
+    eeModal.addEventListener('click', (e) => {
+      if (e.target === eeModal || e.target.classList.contains('close-btn')) {
+        eeModal.classList.remove('visible');
+      }
     });
   </script>
 
